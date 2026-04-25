@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <!-- Start Screen -->
+      <div id="startScreen" class="card">
+        <div class="start-inner">
+          <div class="big">Test Your<br /><span>Knowledge</span></div>
+          <p>
+            10 questions covering JavaScript, CSS, HTML and web-development
+            fundamentals. Pick the best answer for each question. View your score
+             at the end.
+          </p>
+          <button class="start-btn" id="startBtn">Start Quiz →</button>
+        </div>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quizScreen">
+        <div class="header">
+          <div class="logo">Quiz<span>.</span>App</div>
+          <div class="progress-label" id="progressLabel">1 / 10</div>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width: 10%"></div>
+        </div>
+
+        <div class="card" id="quizCard">
+          <div class="question-number" id="questionNumber">Question 01</div>
+          <div class="question" id="questionText"></div>
+          <div class="options" id="optionsContainer"></div>
+          <button class="next-btn" id="nextBtn">Next Question →</button>
+        </div>
+      </div>
+
+      <!-- Results Scren -->
+      <div id="resultsScreen" class="card">
+        <div class="results-inner">
+          <div class="score-center">
+            <div class="score-num" id="scoreNum">0</div>
+            <div class="score-denom" id="scoreDenom">/10</div>
+          </div>
+
+          <div class="result-title" id="resultTitle">Well done!</div>
+          <div class="result-sub" id="resultSub">,jbkjbkj</div>
+
+          <div class="stats-row">
+            <div class="stat">
+              <div class="stat-val green" id="correctCount">0</div>
+              <div class="stat-label">Correct</div>
+            </div>
+            <div class="stat">
+              <div class="stat-val red" id="wrongCount">0</div>
+              <div class="stat-label">Wrong</div>
+            </div>
+          </div>
+
+          <button class="restart-btn" id="restartBtn">↺ Restart Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>
